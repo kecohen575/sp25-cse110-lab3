@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2: Meeting Minutes</title>
+    <link rel="icon" type="image/png" href="icons8-done-100.png">
+</head>
+<body>
+  <header>
+    <h1>Team20 Meeting Minutes</h1>
+    <p><strong>Meeting Topic:</strong> Warming & Norming</p>
+    <p><strong>Date:</strong> April 14, 2025</p>
+    <hr>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#attendance">Attendance</a></li>
+      <li><a href="#agenda">Agenda</a></li>
+      <li><a href="#unfinished">Unfinished Business</a></li>
+      <li><a href="#new">New Business</a></li>
+      <li><a href="#comments">Comments</a></li>
+      <li><a href="#media">Multimedia</a></li>
+      <li><a href="#feedback">Feedback Form</a></li>
+    </ul>
+    <hr>
+  </nav>
+
+  <main>
+    <section id="attendence">
+      <h2>Attendence</h2>
+      <ol>
+        <li><strong>Daniella</strong></li>
+        <li><strong>Erictuan</strong></li>
+        <li><strong>Ethan</strong></li>
+        <li><strong>Kevin</strong></li>
+        <li><strong>Ghaida</strong></li>
+        <li><strong>Gloria</strong></li>
+        <li><strong>Jason</strong></li>
+        <li><strong>JP</strong></li>
+      </ol>
+    </section>
+
+    <section id="agenda">
+      <h2>Agenda</h2>
+      <ul>
+        <li>Meet up at 64 Degrees</li>
+        <li>Do warm-up activity <span>(<em>and take a picture</em>)</span></li>
+        <li>Storyboard video skit</li>
+        <li>Record video skit</li>
+      </ul>
+    </section>
+
+    <section id="unfinished">
+      <h2>Unfinished Business</h2>
+      <p>Items from meeting that need follow-up:</p>
+      <ul>
+        <li>Finish making <b>Team Page</b></li>
+        <li><b>Edit</b> introductory skit</li>
+      </ul>
+    </section>
+
+    <section id="new">
+      <h2>New Business</h2>
+      <p>New discussion topics from today's meeting:</p>
+      <ul>
+        <li>Began <i>brainstorming</i> project ideas</li>
+      </ul>
+    </section>
+
+    <section id="comments">
+      <h2>Miscellaneous Comments</h2>
+      <details>
+        <summary>Click to view additional comments</summary>
+        <p>Some team members raised concerns about deadlines and requested additional resources.</p>
+        <p>For more information, check out <a href="https://www.example.com/more-info" target="_blank">this resource</a>.</p>
+      </details>
+    </section>
+
+    <section id="media">
+      <h2>Multimedia</h2>
+      <div>
+        <h3>Logo/Branding</h3>
+        <img src="branding.png" alt="Team 20 Logo" width="200">
+      </div>
+      <div>
+        <h3>Audio Recording</h3>
+        <audio controls>
+          <source src="team_intro_video.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div>
+        <h3>Video Recording</h3>
+        <video width="320" height="240" controls>
+          <source src="team_intro_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+    <section id="feedback">
+      <h2>Feedback Form</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend><b>Meeting Feedback</b></legend>
+          <br>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <br>
+          <p>Was the meeting productive?</p>
+          <label for="radio-yes">Yes</label>
+          <input type="radio" id="radio-yes" name="productive" value="yes">
+          <label for="radio-no">No</label>
+          <input type="radio" id="radio-no" name="productive" value="no">
+          <br>
+          <p>Select the topics you would like further discussion on:</p>
+          <label for="tech">Technology</label>
+          <input type="checkbox" id="tech" name="topic" value="technology">
+          <label for="design">Design</label>
+          <input type="checkbox" id="design" name="topic" value="design">
+          <br><br>
+          <label for="date">Proposed Follow-up Meeting Date:</label>
+          <input type="date" id="date" name="meeting-date">
+          <br><br>
+          <label for="additional-comments">Additional Comments:</label>
+          <textarea id="additional-comments" name="additional-comments" rows="4" cols="50"></textarea>
+          <br><br>
+          <label for="satisfaction">Satisfaction Level:</label>
+          <input list="satisfaction-options" id="satisfaction" name="satisfaction">
+          <datalist id="satisfaction-options">
+            <option value="Very satisfied">
+            <option value="Satisfied">
+            <option value="Neutral">
+            <option value="Unsatisfied">
+            <option value="Very unsatisfied">
+          </datalist>
+          <br><br>
+          <label for="department">Department:</label>
+          <select id="department" name="department">
+            <option value="engineering">Engineering</option>
+            <option value="design">Design</option>
+            <option value="qa">Quality Assurance</option>
+            <option value="management">Management</option>
+          </select>
+          <br><br>
+          <button type="submit">Submit Feedback</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <div>
+      <p>
+        For more details, please contact <span><em>the project manager</em></span> or refer to the
+        <strong>internal memo</strong>.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Team Meeting Minutes. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
