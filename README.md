@@ -1,2 +1,2 @@
-# Lab 2 - Starter
-https://kecohen575.github.io/CSE110_Lab2/
+# Lab 3 - Starter
+https://kecohen575.github.io/sp25-cse110-lab3/
