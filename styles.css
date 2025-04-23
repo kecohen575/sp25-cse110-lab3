@@ -22,7 +22,28 @@ h2, h3, h4 { color: var(--primary);text-align: center; }
 .highlight { background:rgba(52,152,219,0.1); padding:.5rem; border-radius:4px; }
 
 /* style for the feedback form */
-#feedback { background:#fff; border:1px solid #ccc; padding:1rem; }
+#feedback {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    overflow: hidden; /* prevent accidental overflow */
+}
+#feedback form,
+#feedback fieldset {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+#feedback input[type="text"],
+#feedback input[type="date"],
+#feedback textarea,
+#feedback select,
+#feedback input[list] {
+  width: 100%;
+  box-sizing: border-box;
+}
 
 /* style text/date inputs */
 input[type="text"], input[type="date"] { width:100%; padding:.5rem; border:1px solid #aaa; }
@@ -72,8 +93,16 @@ section {
 }
 
 /* flex container for multimedia and children */
-#media { display:flex; flex-wrap:wrap; gap:1rem; }
-#media > div { flex:1 1 200px; }
+#media .media-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* center the boxes on each row */
+    gap: 1rem;
+}
+  #media .media-items > div {
+    flex: 1 1 200px;
+    text-align: center;       /* center content inside each box */
+}
 
 /* grid layout for main */
 main {
