@@ -53,6 +53,7 @@ button.primary { background:var(--secondary); color:#fff; padding:.6rem 1.2rem; 
 /* style all links inside <nav> */
 nav ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
 }
@@ -101,6 +102,18 @@ section {
   #media .media-items > div {
     flex: 1 1 200px;
     text-align: center;       /* center content inside each box */
+}
+#media img,
+#media video {
+  display: block;               
+  max-width: 100%;              
+  height: auto;                 
+}
+#media audio {
+    display: block;
+    width: 100%;
+    /* don’t override height—let the browser render the controls */
+    margin: 1rem 0;
 }
 
 /* grid layout for main */
