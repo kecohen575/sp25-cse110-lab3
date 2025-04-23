@@ -1,44 +1,37 @@
 name: Lab Task
 description: Create a new CSE110 lab task with interactive fields
 title: '[Lab Task] '
-labels:
-  - task
 assignees:
-  - your-github-username
+  - kecohen575
 
 body:
   - type: input
     id: summary
     attributes:
-      label: '📋 Brief summary'
+      label: '📋  Brief summary'
       description: 'Short, one-line description of the task'
-      placeholder: 'Implement responsive nav bar'
-    # validations goes *beside* attributes, not inside
+      placeholder: 'E.g. implement responsive nav bar'
     validations:
       required: true
 
   - type: textarea
     id: details
     attributes:
-      label: '📝 Details'
+      label: '📝  Details'
       description: 'Explain what needs to be done, why, and any context'
-      placeholder: 'E.g. adjust CSS breakpoints…'
+      placeholder: 'E.g. as [user] I would like to [feature] so that I can [benefit]'
     validations:
       required: true
 
   - type: checkboxes
     id: acceptance
     attributes:
-      label: '✅ Acceptance Criteria'
+      label: '✅  Acceptance Criteria'
       description: 'Check off each item when it’s done (add more if needed)'
       options:
         - label: 'Design matches the mockup'
-          # omit value, use label + optional required
         - label: 'Works across mobile, tablet, desktop'
         - label: 'No console errors'
-    # you can optionally enforce that *all* are checked by adding:
-    # validations:
-    #   required: true
 
   - type: input
     id: references
