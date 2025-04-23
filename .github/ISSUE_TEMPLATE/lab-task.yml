@@ -23,15 +23,13 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
-    id: acceptance
+  - type: textarea
+    id: acceptance_criteria
     attributes:
-      label: '✅  Acceptance Criteria'
-      description: 'Check off each item when it’s done (add more if needed)'
-      options:
-        - label: 'Design matches the mockup'
-        - label: 'Works across mobile, tablet, desktop'
-        - label: 'No console errors'
+      label: '✅ Acceptance Criteria'
+      description: |
+        Edit this checklist as needed—add, remove, or rename items.  
+        **Tip:** each line beginning `- [ ]` will become an interactive checkbox in the issue.
 
   - type: input
     id: references
