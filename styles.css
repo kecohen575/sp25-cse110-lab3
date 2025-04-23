@@ -1,0 +1,63 @@
+:root {
+    --primary: #3498db;
+    --secondary: rgb(46,204,113);
+    --font-stack: 'Roboto', sans-serif;
+}
+* { margin:10; padding:10; box-sizing:border-box; }
+
+body { font-family: var(--font-stack, Arial); background:hsl(210,20%,98%); color:#333; line-height:1.5; }
+h1 { font-size:2.5rem; }
+p  { margin-bottom:1em; }
+
+h2, h3, h4 { color: var(--primary); }
+
+.highlight { background:rgba(52,152,219,0.1); padding:.5rem; border-radius:4px; }
+
+#feedback { background:#fff; border:1px solid #ccc; padding:1rem; }
+
+input[type="text"], input[type="date"] { width:100%; padding:.5rem; border:1px solid #aaa; }
+
+button.primary { background:var(--secondary); color:#fff; padding:.6rem 1.2rem; border:none; }
+
+nav a { color:var(--primary); }
+nav > ul > li { list-style:none; display:inline-block; margin-right:1rem; }
+h2 + p { margin-left:1rem; }
+h2 ~ details { margin-top:1rem; }
+
+a:hover       { text-decoration:underline; }
+button:hover  { background:var(--primary); cursor:pointer; }
+button:active { transform:scale(0.98); }
+summary:hover { text-decoration: underline; }
+
+section {
+    margin-top:1rem; 
+    margin: 1rem 0;
+    padding-left:1em; 
+    padding: 1rem 1.5rem;
+    border:2px solid #ccc;
+    border-radius:8px;
+}
+
+#media { display:flex; flex-wrap:wrap; gap:1rem; }
+#media > div { flex:1 1 200px; }
+
+main {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:1.5rem;
+}
+
+/* pick something else to do */
+section:has(img) { box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+
+/* what does this even do */
+article {
+    & > header { margin-bottom:1rem; }
+    p { line-height:1.4; }
+}
+
+/* what does this even do */
+@media (max-width:600px) {
+    nav ul      { flex-direction:column; }
+    main        { grid-template-columns:1fr; }
+  }  
