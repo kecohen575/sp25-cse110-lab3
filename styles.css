@@ -35,7 +35,6 @@ h2, h3, h4 { color: var(--primary);text-align: center; }
   padding: 0;
   border: none;
 }
-
 #feedback input[type="text"],
 #feedback input[type="date"],
 #feedback textarea,
@@ -110,11 +109,24 @@ main {
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap:1.5rem;
+    /* align-items: start; (some look good, some bad) */
 }
 
-/* pick something else to do */
-/* any section with an <img> gets a subtle shadow */
-section:has(img) { box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+/* highlight any section when its details are expanded */
+section:has(details[open]) {
+    background-color: hsl(60, 100%, 90%);
+    transition: background-color 0.3s ease;
+}
+
+img {
+    border: 3px solid var(--primary);   
+    border-radius: 8px;                 
+    padding: 4px;                     
+    background: var(--primary);                 
+    display: block;                     
+    margin: 1rem auto;                  
+}
+  
 
 /* what does this even do pick something else */
 /* nested selector example (SCSS-style) */
