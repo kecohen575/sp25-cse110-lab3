@@ -1,4 +1,4 @@
-name: Lab Task (Better)
+name: Lab Task
 description: Create a new CSE110 lab task with interactive fields
 title: '[Lab Task] '
 labels:
@@ -13,8 +13,9 @@ body:
       label: '📋 Brief summary'
       description: 'Short, one-line description of the task'
       placeholder: 'Implement responsive nav bar'
-      validations:
-        required: true
+    # validations goes *beside* attributes, not inside
+    validations:
+      required: true
 
   - type: textarea
     id: details
@@ -22,8 +23,8 @@ body:
       label: '📝 Details'
       description: 'Explain what needs to be done, why, and any context'
       placeholder: 'E.g. adjust CSS breakpoints…'
-      validations:
-        required: true
+    validations:
+      required: true
 
   - type: checkboxes
     id: acceptance
@@ -32,11 +33,12 @@ body:
       description: 'Check off each item when it’s done (add more if needed)'
       options:
         - label: 'Design matches the mockup'
-          value: design-mockup
+          # omit value, use label + optional required
         - label: 'Works across mobile, tablet, desktop'
-          value: responsive
         - label: 'No console errors'
-          value: no-errors
+    # you can optionally enforce that *all* are checked by adding:
+    # validations:
+    #   required: true
 
   - type: input
     id: references
@@ -44,3 +46,5 @@ body:
       label: '🔗 References / Links'
       description: 'Link to lab spec, design file, related PR, etc.'
       placeholder: 'https://…'
+    validations:
+      required: false
