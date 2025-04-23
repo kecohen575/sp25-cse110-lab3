@@ -10,12 +10,14 @@
 <body>
   <header>
     <h1>Team20 Meeting Minutes</h1>
-    <p><strong>Meeting Topic:</strong> Warming & Norming</p>
-    <p><strong>Date:</strong> April 14, 2025</p>
-    <hr>
+    <div>
+      <p><strong>Meeting Topic:</strong> Warming & Norming</p>
+      <p><strong>Date:</strong> April 14, 2025</p>
+    </div>
   </header>
 
-  <nav>
+  <hr>
+  <nav class="highlight">
     <ul>
       <li><a href="#attendance">Attendance</a></li>
       <li><a href="#agenda">Agenda</a></li>
@@ -25,8 +27,8 @@
       <li><a href="#media">Multimedia</a></li>
       <li><a href="#feedback">Feedback Form</a></li>
     </ul>
-    <hr>
   </nav>
+  <hr>
 
   <main>
     <section id="attendence">
@@ -81,21 +83,23 @@
 
     <section id="media">
       <h2>Multimedia</h2>
-      <div>
-        <h3>Logo/Branding</h3>
-        <img src="branding.png" alt="Team 20 Logo" width="200">
-      </div>
-      <div>
-        <h3>Audio Recording</h3>
-        <audio controls>
-          <source src="team_intro_video.mp3" type="audio/mpeg">
-        </audio>
-      </div>
-      <div>
-        <h3>Video Recording</h3>
-        <video width="320" height="240" controls>
-          <source src="team_intro_video.mp4" type="video/mp4">
-        </video>
+      <div class="media-items">
+        <div>
+          <h3>Logo/Branding</h3>
+          <img src="branding.png" alt="Team 20 Logo" width="200">
+        </div>
+        <div>
+          <h3>Audio Recording</h3>
+          <audio controls>
+            <source src="team_intro_video.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <div>
+          <h3>Video Recording</h3>
+          <video width="320" height="240" controls>
+            <source src="team_intro_video.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </section>
 
@@ -138,26 +142,26 @@
           <br><br>
           <label for="department">Department:</label>
           <select id="department" name="department">
+            <option value="" disabled selected hidden>
+              — Select department —
+            </option>
             <option value="engineering">Engineering</option>
             <option value="design">Design</option>
             <option value="qa">Quality Assurance</option>
             <option value="management">Management</option>
           </select>
           <br><br>
-          <button type="submit">Submit Feedback</button>
+          <button type="submit" class="primary">Submit Feedback</button>
         </fieldset>
       </form>
     </section>
-
-    <div>
-      <p>
-        For more details, please contact <span><em>the project manager</em></span> or refer to the
-        <strong>internal memo</strong>.
-      </p>
-    </div>
   </main>
 
   <footer>
+    <p>
+      For more details, please contact <span><i>the project manager</i></span> or refer to the
+      <b>internal memo</b>.
+    </p>
     <p>&copy; 2025 Team Meeting Minutes. All rights reserved.</p>
   </footer>
 
